@@ -19,6 +19,7 @@ constructor(bodyA,pointB){
 }
 display(){
 
+    
     image(this.sling1,200,10);
     image(this.sling2,170,10);
 
@@ -48,5 +49,10 @@ display(){
 fly(){
 
     this.slingshot.bodyA = null;
+}
+
+attach(bodyA){
+
+this.slingshot.bodyA = bodyA;    
 }
 }
