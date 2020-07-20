@@ -1,10 +1,9 @@
-class Pig extends BaseClass{
+class Pig2 extends BaseClass{
     constructor(x, y) {
       super(x,y,50,50);
 
-      this.image = loadImage("sprites/KingPig.png");
-      this.image2 = loadImage("sprites/pgiout.png");
-
+      this.image = loadImage("sprites/Pgi.png");
+      this.image2 = loadImage("sprites/pgiout2.png");
       this.visibility = 255;
     }
     display(){
