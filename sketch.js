@@ -12,6 +12,10 @@ var chain,bg = "sprites/bg.png";
 var gameState = "ready"
 var GameState = "start"
 
+var score = 0;
+
+var backgroundImage;
+
 function preload(){
 
    // grnd = loadImage("sprites/bg.png");
@@ -50,6 +54,8 @@ function setup(){
  
 
    slingshot = new Slingshot(bird.body,{x:200,y:50});
+
+   
     }
 
 
@@ -62,15 +68,22 @@ function draw(){
    
     Engine.update(engine);
 
+    noStroke();
+    textSize(35);
+    fill("white");
+    text("Score"+score,width-300,50);
+
     box1.display();
     box2.display();
     ground.display();
     pig1.display();
+    pig1.score();
     log1.display();
 
     box3.display();
     box4.display();
     pig3.display();
+    pig3.score();
     log3.display();
 
     box5.display();
@@ -83,7 +96,7 @@ function draw(){
 
     bird.display();
 
-  
+   
 }
 
 function mouseDragged(){
@@ -121,7 +134,7 @@ async function getBackgroundImage(){
     bg = "sprites/bg.png"
    }else{
 
-    bg  = "sprites/bg2.png";
+    bg  = "sprites/bg2.jpg";
    }
 
    backgroundImage = loadImage(bg)
