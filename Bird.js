@@ -7,6 +7,7 @@ class Bird extends BaseClass{
   }
   display(){
     
+    console.log(bird.body.speed)
     super.display();
     
     if(this.body.velocity.x>10 && this.body.position.x>200){
